@@ -1,0 +1,9 @@
+﻿  소스1.cpp
+C:\Users\anjyo\Desktop\객체지향프로그래밍\Var\소스1.cpp(20,41): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+      C:\Users\anjyo\Desktop\객체지향프로그래밍\Var\소스1.cpp(20,41):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\anjyo\Desktop\객체지향프로그래밍\Var\소스1.cpp(31,14):
+          컴파일되는 함수 템플릿 인스턴스화 'std::array<float,5> build_array<int,unsigned int,char,float,bool>(int &&,unsigned int &&,char &&,float &&,bool &&)'에 대한 참조를 확인하세요.
+  
+C:\Users\anjyo\Desktop\객체지향프로그래밍\Var\소스1.cpp(20,41): warning C4244: '인수': 'unsigned int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Var.vcxproj -> C:\Users\anjyo\Desktop\객체지향프로그래밍\Var\x64\Debug\Var.exe
