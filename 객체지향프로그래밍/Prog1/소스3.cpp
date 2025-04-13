@@ -4,16 +4,16 @@ using namespace std;
 
 int main()
 {
-	/*
+	
 	int score = 0;
 	cin >> score;
 	if (score >= 95)
 	{
 		cout << "A+" << endl;
 	}
-	else if (score >= 94)
+	else if (score >= 90)
 	{
-		cout << "A+" << endl;
+		cout << "A" << endl;
 	}
 	else if (score >= 85)
 	{
@@ -48,44 +48,46 @@ int main()
 	cin >> num;
 	if (num < 0)
 	{
-		cout << ~num+1 << endl;
+		cout << ~num+1 << endl; // 2의 보수 표현법 
 	}
 	else
 	{
 		cout << num << endl;
 	}
 	
-	*/
-
+	
 	int num2 = 0;
 	int num3 = 0;
 	int num4 = 0;
 
-	int max, min = 0;
-	cin >> num2;
-	cin >> num3;
-	cin >> num4;
-	if (num2 > num3 && num2 > num4 && num3>num4)
+	int max, min;
+	cin >> num2 >> num3 >> num4;
+
+	// 첫 번째 숫자를 초기 max와 min으로 설정
+	max = num2;
+	min = num2;  
+
+	if (num3 > max)
 	{
-		max = num2;
-		min = num4;
-		cout << "max: " << max << endl;
-		cout << "min: " << min << endl;
+		max = num3; // num3가 더 크면 max를 num3로 변경
 	}
-	else if (num3 > num2 && num3 > num4 && num2>num4)
+	if (num3 < min)
 	{
-		max = num3;
-		min = num4;
-		cout << "max: " << max << endl;
-		cout << "min: " << min << endl;
+		min = num3; // 같은 방식으로 num3로 변경
 	}
-	else if(num4>num3 && num4>num2 &&num3>num2)
+	
+	if (num4 > max)
 	{
 		max = num4;
-		min = num2;
-		cout << "max: " << max << endl;
-		cout << "min: " << min << endl;
 	}
+	if (num4 < min)
+	{
+		min = num4;
+	}
+
+	cout << "max : " <<max<< endl;
+	cout << "min : " << min<<endl;
+
 
 	return 0;
 }

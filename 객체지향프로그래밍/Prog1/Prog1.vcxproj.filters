@@ -21,7 +21,7 @@
     <ClCompile Include="소스1.cpp">
       <Filter>리소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="소스2.cpp">
+    <ClCompile Include="6주차 소스.cpp">
       <Filter>리소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="소스3.cpp">
