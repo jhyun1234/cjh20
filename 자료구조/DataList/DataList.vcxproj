@@ -156,6 +156,7 @@
     <ClCompile Include="연습문제6.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="자료구조 연결리스트.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StackChar.h" />

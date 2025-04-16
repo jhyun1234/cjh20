@@ -48,6 +48,9 @@
     <ClCompile Include="어댑터.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="자료구조 연결리스트.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="얕은 복사.h">
