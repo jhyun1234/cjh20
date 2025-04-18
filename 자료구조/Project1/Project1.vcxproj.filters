@@ -39,6 +39,9 @@
     <ClCompile Include="소스.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="..\Data_Structure_Src%28『윤성우의 열혈 자료구조』소스파일%29\Ch04\Prob04-2\DLinkedRead.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Data_Structure_Src(『윤성우의 열혈 자료구조』소스파일)\Ch03\ArrayList\ArrayList.h">

@@ -148,7 +148,10 @@
     <ClCompile Include="..\Data_Structure_Src%28『윤성우의 열혈 자료구조』소스파일%29\Ch04\LinkedRead.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="소스.cpp" />
+    <ClCompile Include="..\Data_Structure_Src%28『윤성우의 열혈 자료구조』소스파일%29\Ch04\Prob04-2\DLinkedRead.cpp" />
+    <ClCompile Include="소스.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Data_Structure_Src(『윤성우의 열혈 자료구조』소스파일)\Ch03\ArrayListPointStructBase\Point.h" />

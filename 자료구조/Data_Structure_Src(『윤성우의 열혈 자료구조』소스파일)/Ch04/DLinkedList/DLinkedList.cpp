@@ -21,6 +21,19 @@ void FInsert(List * plist, LData data)
 	(plist->numOfData)++;
 }
 
+void FInsert(List* plist, LData data)
+{
+	Node* newNode = new Node; // 새롭게 노드를 동적으로 생성하고
+	newNode->data = data; // newNode에 새로운 데이터를 저장
+
+	
+	newNode->next = plist->head->next; // newNode의 next 포인터가 더미 헤드가 가리키던 노드를 가리키게 한다. 
+	plist->head->next = newNode; 
+	// plist-> head의 next 포인터가 이제 newNode를 가리키도록 변경
+	// 새 노드가 리스트의 새로운 첫 번째 데이터 노드가 됨
+}
+
+
 void SInsert(List * plist, LData data)
 {
 	Node * newNode = (Node*)malloc(sizeof(Node));

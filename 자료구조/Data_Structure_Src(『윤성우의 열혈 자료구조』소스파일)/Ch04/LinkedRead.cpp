@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <iostream>
 typedef struct _node
 {
 	int data;
@@ -15,6 +15,9 @@ int main(void)
 
 	Node * newNode = NULL;
 	int readData;
+
+	head = new Node;
+	tail = head;
 
 	/**** 데이터를 입력 받는 과정 ****/
 	while(1)
