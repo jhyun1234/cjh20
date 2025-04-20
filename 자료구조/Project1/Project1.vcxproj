@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -149,6 +149,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\Data_Structure_Src%28『윤성우의 열혈 자료구조』소스파일%29\Ch04\Prob04-2\DLinkedRead.cpp" />
+    <ClCompile Include="..\Data_Structure_Src%28『윤성우의 열혈 자료구조』소스파일%29\Ch05\CircularLinkedList\CLinkedList.cpp" />
+    <ClCompile Include="..\Data_Structure_Src%28『윤성우의 열혈 자료구조』소스파일%29\Ch05\CircularLinkedList\CLinkedListMain.cpp" />
+    <ClCompile Include="..\Data_Structure_Src%28『윤성우의 열혈 자료구조』소스파일%29\Ch05\DublyLinkedList\DBLinkedList.cpp" />
+    <ClCompile Include="..\Data_Structure_Src%28『윤성우의 열혈 자료구조』소스파일%29\Ch05\DublyLinkedList\DBLinkedListMain.cpp" />
     <ClCompile Include="소스.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -157,6 +161,8 @@
     <ClInclude Include="..\Data_Structure_Src(『윤성우의 열혈 자료구조』소스파일)\Ch03\ArrayListPointStructBase\Point.h" />
     <ClInclude Include="..\Data_Structure_Src(『윤성우의 열혈 자료구조』소스파일)\Ch03\ArrayList\ArrayList.h" />
     <ClInclude Include="..\Data_Structure_Src(『윤성우의 열혈 자료구조』소스파일)\Ch04\DLinkedList\DLinkedList.h" />
+    <ClInclude Include="..\Data_Structure_Src(『윤성우의 열혈 자료구조』소스파일)\Ch05\CircularLinkedList\CLinkedList.h" />
+    <ClInclude Include="..\Data_Structure_Src(『윤성우의 열혈 자료구조』소스파일)\Ch05\DublyLinkedList\DBLinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
