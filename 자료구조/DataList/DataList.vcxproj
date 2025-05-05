@@ -158,7 +158,10 @@
     <ClCompile Include="연습문제6.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="원형 큐 연결리스트.cpp" />
+    <ClCompile Include="원형 큐 연결리스트.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="이진트리.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StackChar.h" />
