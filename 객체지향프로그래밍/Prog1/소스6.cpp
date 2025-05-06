@@ -3,10 +3,11 @@
 using namespace std;
 
 int sum(int a, int b);
+float sum(float a, float b);
 void swap(int &a, int &b);
 void swap(float *a, float *b);
 int Arr(int arr[], int a);
-
+int SumArr(int arr[], int size);
 // ÇÔ¼öÀÇ ÀÔ·Â°ªÀÌ ÀÖ´Â°Í°ú ¾ø´Â°Í¿¡ ´ëÇØ¼­
 // ÀÔ·Â°ªÀÌ ÀÖÀ¸¸é ¹«Á¶°Ç return °ªÀÌ ÀÖ¾î¾ß ÇÏ´Â°¡? NO
 // ÀÚ·áÇüÀ» ¸í½ÃÇØ¼­ ÇÔ¼ö¸¦ ¸¸µç´Ù¸é ¹«Á¶°Ç return °ªÀÌ ÀÖ¾î¾ß ÇÏ´Â°¡? YES
@@ -16,29 +17,29 @@ int Arr(int arr[], int a);
 // call by ref °ªÀÇ º¯°æÀ» ¿øÇÒ°æ¿ì
 int main()
 {
-	/*
+	cout << "µÎ Á¤¼öÀÇ ÇÕ int" << endl;
 	int var1, var2 = 0;
 	cin >> var1 >> var2;
 	cout<<sum(var1,var2)<<endl;
 	// sum(30) error µğÆúÆ® ÆÄ¶ó¹ÌÅÍ´Â µÚÂÊÀ¸·Î ³öµÖ¶ó , Áß°£¿¡ ºó°ªÀÌ ÀÖÀ¸¸é ¾ÈµÈ´Ù.
+	cout << "µÎ ½Ç¼öÀÇ ÇÕ float" << endl;
 	float c, d = 0;
 	cin >> c >> d;
 	cout << sum(c, d) << endl;
 
-
+	cout << "µÎ Á¤¼öÀÇ °ª ±³È¯" << endl;
 	int a, b = 0;
 	float e, f = 0;
 
 	cin >> a >> b;
 	swap(a, b);
 	cout << a<<" "<< b << endl;
-
+	cout << "µÎ ½Ç¼öÀÇ °ª ±³È¯" << endl;
 	cin >> e >> f;
 	swap(&e, &f);
 	cout << e <<" "<<  f << endl;
-	*/
-	cout << "¹è¿­" << endl;
-	/*
+	
+	cout << "¹è¿­¿¡ ³ÖÀ» °ª ÀÔ·Â ÈÄ ÇÕ°ú ¹è¿­ÀÇ »çÀÌÁî Ãâ·Â" << endl;
 	int arr[5] = {};
 	int sum = 0;
 	for (int i = 0; i < 5; i++)
@@ -58,24 +59,40 @@ int main()
 	}
 	cout << sum << endl;
 	cout << sizeof(arr) << endl;
-	*/
+	
 
-	int data[5] = {};
 	
-	int data2[10] = {};
-	
+	// Ã¹ ¹øÂ° ¹è¿­
+	int farry[5];
+
+	SumArr(farry, 5);
+
+	// µÎ ¹øÂ° ¹è¿­
+
+	int searry[10];
+
+	// searryÀÇ ¾ÕºÎºĞ(0~4)À» farry °ªÀ¸·Î º¹»ç
 	for (int i = 0; i < 5; i++)
 	{
-		data2[i] = data[i];
+		searry[i] = farry[i];
 	}
 
-	int input = 5;
+	// searryÀÇ µŞºÎºĞ(5~9) »ç¿ëÀÚ ÀÔ·Â¹Ş±â
+	int toinput = 5;
+	cout << "µŞºÎºĞ ÀÔ·Â : " << toinput << endl;
 	for (int i = 5; i < 10; i++)
 	{
-		cin >> data2[i];
-
-		cout << data2[i] << endl;
+		cin >> searry[i];
 	}
+
+	// ÃÑÇÕ
+	int total = 0;
+	for (int i = 0; i < 10; i++)
+	{
+		cout << searry[i] << " ";
+		total += searry[i];
+	}
+	cout << " ÃÑÇÕ : "<< total << endl;
 
 
 	return 0;
@@ -86,7 +103,7 @@ int sum(int a, int b)
 	return a + b;
 }
 
-float sum(float a, float b)
+float sum(float a, float b) // ÀÚ·áÇüÀÌ ´Ù¸£¸é °°Àº ÇÔ¼ö ÀÌ¸§À» »ç¿ëÇØµµ µÈ´Ù.
 {
 	return a + b;
 }
@@ -126,5 +143,27 @@ int Arr(int arr[],int size) // ÁÖ¼Ò¸¦ Àü´ŞÇÔ°ú µ¿½Ã¿¡ µ¥ÀÌÅÍ¸¦ ¸î°³¸¦ Àü´ŞÇØ¾ß Ç
 	cout << endl;
 	cout << sum << endl;
 	cout << sizeof(arr) << endl;  // 8 ÀÌ ³ª¿À´Â ÀÌÀ¯´Â Æ÷ÀÎÅÍ º¯¼öÀÇ Å©±â ¶§¹®ÀÌ´Ù.
+	return sum;
+}
+
+int SumArr(int arr[], int size)
+{
+	int sum = 0;
+	cout << "¹è¿­¿¡ µé¾î°¥ ¿ø¼Ò ÀÔ·Â " << endl;
+	for (int i = 0; i < size; i++)
+	{
+		cin >> arr[i];
+	}
+
+	cout << "¿ø¼ÒµéÀÇ ÇÕ °è»ê Ãâ·Â" << endl;
+	for (int i = 0; i < size; i++)
+	{
+		cout << arr[i] << " ";
+		sum += arr[i]; // ÇÕ°è ´©Àû
+	}
+	cout << endl;
+
+	// ÇÕ Ãâ·Â
+	cout << sum << endl;
 	return sum;
 }
