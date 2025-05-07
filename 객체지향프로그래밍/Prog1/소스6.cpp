@@ -17,6 +17,7 @@ int SumArr(int arr[], int size);
 // call by ref 값의 변경을 원할경우
 int main()
 {
+	/*
 	cout << "두 정수의 합 int" << endl;
 	int var1, var2 = 0;
 	cin >> var1 >> var2;
@@ -59,7 +60,7 @@ int main()
 	}
 	cout << sum << endl;
 	cout << sizeof(arr) << endl;
-	
+	*/
 
 	
 	// 첫 번째 배열
@@ -92,7 +93,7 @@ int main()
 		cout << searry[i] << " ";
 		total += searry[i];
 	}
-	cout << " 총합 : "<< total << endl;
+	cout << " 총합 : "<<total << endl;
 
 
 	return 0;
