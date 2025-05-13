@@ -10,38 +10,50 @@ int Middlevalue(int arr[], int size);
 int main()
 {
 	int a = 10;
-	
+	// const a = 10;
 	// a = 30; error const를 붙이면 값을 변경할 수 없다.
 	
 	const int& b=a;
-	
+	// 참조변수 앞에도 const를 붙일 수 있다.
+	// b = 50; error 
 	a = 50;
-	cout << a << endl;
+	cout <<"a의 값 : " << a << endl;
 	
-	increase10(&a);
-	cout << a << endl;
+	increase10(&a); // 값을 증가시키는 함수
+	cout <<"함수 호출 후 증가된 a의 값 : " << a << endl;
 
-	Sum(a, b);
-	cout << Sum(a, b) << endl;
+	Sum(a, b); // 두 값을 더하는 함수
+	cout <<"Sum함수 호출 후 값 : " << Sum(a, b) << endl;
+	// 120이 나오는 이유는 참조변수 b는 a를 참조하고있다. 
+	// a가 increase10()함수를 통해 값이 증가되었기 때문에 60 + 60 = 120 이 나온다.
+	cout << endl;
 
 
-	int arr[5] = { 10,20,30,40,50 };
-	cout << Sum(arr[1], arr[4]) << endl;
+	int arr[5] = { 15,25,35,45,55 };
+	cout <<"arr배열의 1번째 인덱스와 4번째 인덱스의 합 : " << Sum(arr[1], arr[4]) << endl;
 	// 배열의 인덱스를 통해서 값을 반환할 수 있다.
 
 	int c = 30;
+	cout << "기존 a ,c 값 : " << a <<" " << c << endl;
 	Swap(&a, &c);
-	cout << a << " " << c << endl;
+	cout <<"a와 c의 값을 Swap 함수를 통해서 바꾼 값 : " << a << " " << c << endl;
 
+	cout << "기존 arr[0] ,arr[4]의 값 : " << arr[0] << " " << arr[4] << endl;
 	Swap(&arr[0], &arr[4]);
-	cout << arr[0] << " " << arr[4] << endl;
+	cout <<"arr[0]와 arr[4]의 값을 Swap 함수를 통해서 바꾼 값 : " << arr[0] << " " << arr[4] << endl;
 	// 배열의 인덱스를 통해서 값을 바꿀 수 있다.
-	
-	// arr[2] = 1;
-	cout<<Maxvalue(arr, 5)<<endl;
-	cout<<Minvalue(arr, 5)<<endl;
+	cout << endl;
 
-	cout << Middlevalue(arr, 5) << endl;
+	// arr[2] = 1;
+	cout<< "Maxvalue함수를 호출해 찾은 값 : " <<Maxvalue(arr, 5)<< endl;
+	// arr 배열에 있는 최대값을 찾는 함수호출
+
+	cout<< "Minvalue함수를 호출해 찾은 값 : "<<Minvalue(arr, 5)<<endl;
+	// arr 배열에 있는 최솟값을 찾는 함수호출
+	
+	cout << "Middlevalue함수를 호출해 찾은 값 : " << Middlevalue(arr, 5) << endl;
+	// arr 배열중 중간값을 구하는 함수호출
+
 
 	return 0;
 }
@@ -105,8 +117,11 @@ int Minvalue(int arr[], int size)
 
 int Middlevalue(int arr[], int size)
 {
-	int mid = 0;
-	int max = 0;
+	if (size <= 0)
+	{
+		return false;
+	}
+	int max = arr[0];
 	int min = arr[0];
 	for (int i = 1; i < size; i++)
 	{
@@ -114,11 +129,7 @@ int Middlevalue(int arr[], int size)
 		{
 			min = arr[i];
 		}
-	}
-
-	for (int i = 0; i < size; i++)
-	{
-		if (arr[i] > max)
+		else if (arr[i] > max)
 		{
 			max = arr[i];
 		}
