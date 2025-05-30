@@ -2,6 +2,7 @@
 
 using namespace std;
 void increase10(int *val);
+void increase11(int& val);
 int Sum(int val1, int val2);
 void Swap(int* val1, int* val2);
 int Maxvalue(int arr[], int size);
@@ -9,6 +10,10 @@ int Minvalue(int arr[], int size);
 int Middlevalue(int arr[], int size);
 int main()
 {
+	int c = 10;
+	increase11(c);
+	increase10(&c);
+
 	int a = 10;
 	// const a = 10;
 	// a = 30; error const를 붙이면 값을 변경할 수 없다.
@@ -71,6 +76,12 @@ void increase10(const int* val)
 	cout<<*val<<endl;
 }
 */
+void increase11(int& val)
+{
+
+	val += 10;
+}
+
 
 int Sum(int val1, int val2)
 {

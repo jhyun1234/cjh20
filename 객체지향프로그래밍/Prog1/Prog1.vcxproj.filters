@@ -42,6 +42,15 @@
     <ClCompile Include="소스7.cpp">
       <Filter>리소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="소스8.cpp">
+      <Filter>리소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스9.cpp">
+      <Filter>리소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스10.cpp">
+      <Filter>리소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="변수,포인터 등등h.h">
